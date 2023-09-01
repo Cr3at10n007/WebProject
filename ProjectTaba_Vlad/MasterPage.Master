@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="ProjectTaba_Vlad.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+     .logo{
+         height:auto;
+         width:auto;
+     }
+     .inlineimg{
+            height:1em;
+            width:auto;
+            display:inline-block;
+        }
+     body{
+         direction:rtl;
+         background-color: lightskyblue;
+         margin-right: 50px;
+         margin-left: 50px;
+     }
+     table{
+         width: 90%;
+         align-content:center;
+     }
+     td{border: 2px dashed teal}
+     img{
+         width:50%;
+         height:auto;
+         display:block;
+         margin-right:auto;
+         margin-left:auto;
+     }
+     h1{
+         text-align:center;
+         background-image: linear-gradient(to right, Red , Orange, Yellow, Green, Blue, Indigo, Violet);
+         color:transparent;
+         -moz-background-clip:text;
+         -webkit-background-clip:text;
+     }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <img class="logo" src="pics/math.jpeg"/>
+            </td>
+            <td>
+                <h1 style="font-weight:bold; text-align:center;">
+                    סיכומי המתמטיקה של וולאד
+                </h1>
+            </td>
+            <td style="font-size:larger">
+                <a href="LogInPage.aspx">Log In</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align:center;">
+                <a href="MainPage.aspx">דף הבית</a> &nbsp; &#8226; &nbsp;
+                <a href="Calculus.aspx">חדוו''א</a> &nbsp; &#8226; &nbsp;
+                <a href="series.aspx">סדרות</a> &nbsp; &#8226; &nbsp;
+                <a href="movementProblems.aspx">בעיות תנועה</a> &nbsp; &#8226; &nbsp;
+                <a href="userTable.aspx">טבלת משתמשים</a> &nbsp; &#8226; &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h1><a href="mailto:itskovvlad@gmail.com">צור קשר</a></h1>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
